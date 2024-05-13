@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Crafters Admin Page</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1>Pizza Crafters Contact</h1>
+            <img src="img/crafters-logo.png" width="727px" height="219px" alt="The Pizza Crafters Logo!">
+            <nav>
+                <a href="index.html">Home Page</a>
+                <a href="menu.html">Our Menu</a>
+                <a href="contact.html">Contact Us!</a>
+                <a href="admin.html">It's a secret to everybody!</a>
+            </nav>
+        </header>
+        <section>
+            <p>This will just be our little secret, shhhhhh.</p>
+            <br>
+            <h3>Events</h3>
+            <!--
+                My idea with this mini form for both sections is to have it handle updates and deletes, when getid is clicked it will use the one input from this form and select that item from the db, filling out the form with the details. delete is similar in that it automatically deletes from mongodb where the given id is provided. If you all have any issues with this model let me know.
+            -->
+            <form id="eupdateid">
+                <label for="eid">ID to Update?:</label><br>
+                <input type="text" id="eid" name="eid"><br>
+                <input type="submit" id="egetid" value="Get ID from Events"><input type="submit" id="edelete" value="Delete ID from Events">
+            </form>
+            <br>
+            <form id="eventform">
+                <label for="ename">Event Name:</label><br>
+                <input type="text" id="ename" name="ename"><br>
+                <label for="elocation">Event Location:</label><br>
+                <input type="text" id="elocation" name="elocation"><br>
+                <label for="edates">Event Dates:</label><br>
+                <input type="text" id="edates" name="edates"><br>
+                <label for="ehours">Event Hours:</label><br>
+                <input type="text" id="ehours" name="ehours"><br>
+                <input type="submit" id="esubmit" value="Submit to Events">
+            </form>
+            <br>
+            <h3>Menu</h3>
+            <form id="mupdateid">
+                <label for="mid">ID to Update?:</label><br>
+                <input type="text" id="mid" name="mid"><br>
+                <input type="submit" id="mgetid" value="Get ID from Menu"><input type="submit" id="mdelete" value="Delete ID from Menu">
+            </form>
+            <br>
+            <form id="eventform">
+                <label for="mname">Menu Item Name:</label><br>
+                <input type="text" id="mname" name="mname"><br>
+                <label for="mdesc">Menu Item Description:</label><br>
+                <input type="text" id="mdesc" name="mdesc"><br>
+                <label for="mprice">Menu Item Price:</label><br>
+                <input type="text" id="mprice" name="mprice"><br>
+                <input type="submit" id="esubmit" value="Submit to Menu">
+            </form>
+        </section>
+        <footer>
+            <p><small>Pizza Crafters 2023&copy;</small></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -25,9 +25,9 @@ app.use((request, response) => {
     response.status(404).sendFile('404.html', { root: path.join(__dirname, 'public') })
 })
 
-const getCollection = async (dbName, collectionName) => {
+const getCollection = async (dbName, Food-Truck-API) => {
     await client.connect()
-    return client.db('todoAPI').collection(collectionName)
+    return client.db('Food-Truck-API').collection(Food-Truck-API)
 }
 
 app.locals.getCollection = getCollection
@@ -36,25 +36,25 @@ const message = `Server running: http://localhost:${port}`
 app.listen(port, () => console.log(message))
 
 router.put('/:id', async (req, res) => {
-    const collection = await getCollection('dbName1', 'collectionName')
+    const collection = await getCollection('Events', 'Food-Truck-API')
     const result = await collection.updateOne({ _id: ObjectId(req.params.id) }, { $set: req.body })
     res.json(result)
 })
 
 router.delete('/:id', async (req, res) => {
-    const collection = await getCollection('dbName1', 'collectionName')
+    const collection = await getCollection('Events', 'Food-Truck-API')
     const result = await collection.deleteOne({ _id: ObjectId(req.params.id) })
     res.json(result)
 })
 
 router.put('/:id', async (req, res) => {
-    const collection = await getCollection('dbName2', 'collectionName')
+    const collection = await getCollection('Menu', 'Food-Truck-API')
     const result = await collection.updateOne({ _id: ObjectId(req.params.id) }, { $set: req.body })
     res.json(result)
 })
 
 router.delete('/:id', async (req, res) => {
-    const collection = await getCollection('dbName2', 'collectionName')
+    const collection = await getCollection('Menu', 'Food-Truck-API')
     const result = await collection.deleteOne({ _id: ObjectId(req.params.id) })
     res.json(result)
 })

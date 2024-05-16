@@ -1,0 +1,72 @@
+# @name getMenu
+GET http://localhost:3000/api/menu
+
+###
+
+# @name postMenu
+POST http://localhost:3000/api/menu
+Content-Type: application/json
+
+{
+  "name": "Pizza",
+  "description": "Delicious cheese pizza",
+  "price": 10.99
+}
+
+###
+
+# @name putMenu
+PUT http://localhost:3000/api/menu/:id
+Content-Type: application/json
+
+{
+  "name": "Pizza",
+  "description": "Delicious cheese pizza",
+  "price": 11.99
+}
+
+###
+
+# @name deleteMenu
+DELETE http://localhost:3000/api/menu/:id
+
+###
+
+# @name getEvents
+GET http://localhost:3000/api/events
+
+###
+
+# @name getEvent
+GET http://localhost:3000/api/events/:id
+
+###
+
+# @name postEvent
+POST http://localhost:3000/api/events
+Content-Type: application/json
+
+{
+  "name": "Pizza Festival",
+  "location": "City Park",
+  "dates": "June 1 - June 3",
+  "hours": "10:00 AM - 6:00 PM"
+}
+
+###
+
+# @name putEvent
+PUT http://localhost:3000/api/events/:id
+Content-Type: application/json
+
+{
+  "name": "Pizza Festival",
+  "location": "City Park",
+  "dates": "June 1 - June 3",
+  "hours": "10:00 AM - 8:00 PM"
+}
+
+###
+
+# @name deleteEvent
+DELETE http://localhost:3000/api/events/:id

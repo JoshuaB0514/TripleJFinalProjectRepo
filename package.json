@@ -3,5 +3,15 @@
     "express": "^4.19.2",
     "mongodb": "^6.6.1",
     "node": "^20.13.1"
-  }
+  },
+  "name": "triplejfinalprojectrepo",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
